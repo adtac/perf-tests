@@ -3,6 +3,7 @@
 # - Number of nodes should be divisible by NODES_PER_NAMESPACE (default 100).
 
 #Constants
+{{$NAME := DefaultParam .NAME "density"}}
 {{$DENSITY_RESOURCE_CONSTRAINTS_FILE := DefaultParam .DENSITY_RESOURCE_CONSTRAINTS_FILE ""}}
 {{$NODE_MODE := DefaultParam .NODE_MODE "allnodes"}}
 {{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 100}}
@@ -44,7 +45,7 @@
 # Probe measurements shared parameter
 {{$PROBE_MEASUREMENTS_CHECK_PROBES_READY_TIMEOUT := DefaultParam .CL2_PROBE_MEASUREMENTS_CHECK_PROBES_READY_TIMEOUT "5m"}}
 
-name: density
+name: {{$NAME}}
 namespace:
   number: {{$namespaces}}
 tuningSets:

@@ -1,2 +1,3 @@
+NAME: pod-anti-affinity
 SATURATION_DEPLOYMENT_SPEC: scheduler/pod-anti-affinity/deployment.yaml
 LATENCY_DEPLOYMENT_SPEC: scheduler/pod-anti-affinity/deployment.yaml
